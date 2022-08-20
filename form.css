@@ -1,0 +1,167 @@
+*{ /* '*' is the universal selector */
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Others are the class selector*/
+.header{
+    background-color: teal;
+    color: white;
+    line-height: 50px; /* Sets the text or everything to the center, works as padding can be said */
+}
+.container{
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+}
+.main-menu{
+    margin: auto;
+}
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-items li{
+    display: inline-block;
+}
+.nav-items li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+.nav-items li a:hover{ /* Hover works on sub-class but here is just the class and so it will work on it as well*/
+    background-color: rgb(5, 39, 39);
+    padding: 20px;
+}
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+.hamburger:focus {
+    outline: none;
+}
+.section {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 10px;
+}
+.whole {
+    margin-top: 2px;
+    background: rgb(233, 232, 167);
+}
+.body {
+    animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+.main {
+    /* width: 400px; */
+    margin: 50px auto 40px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+form {
+    margin: 40px;
+}
+.rest {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: rgb(250, 243, 243);
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+/* input[type=submit] {
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+} */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #3b9640;
+}
+label {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.back {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+.footer {
+    color: #fff;
+}
+.footer .social a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+@media(max-width: 998px) {
+    
+    .nav-items {
+        display: none;
+        flex-direction: column;
+    }
+    .nav-items.show {
+        display: flex;
+        align-items: center;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .img {
+        display: none;
+    }
+}

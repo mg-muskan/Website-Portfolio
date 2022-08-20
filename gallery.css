@@ -1,0 +1,160 @@
+* { /* '*' is the universal selector */
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Others are the class selector*/
+.header {
+    background-color: teal;
+    color: white;
+    line-height: 50px; /* Sets the text or everything to the center, works as padding can be said */
+}
+.container {
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+}
+.main-menu {
+    margin: auto;
+}
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-items li {
+    display: inline-block;
+}
+.nav-items li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+.nav-items li a:hover {
+    background-color: rgb(5, 39, 39);
+    padding: 20px;
+}
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+.hamburger:focus {
+    outline: none;
+}
+.section {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 10px;
+}
+.whole {
+    margin-top: 2px;
+}
+.detail {
+    padding-top: 30px;
+}
+.body {
+    animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+.gallery img {
+    width: 230px;
+    padding: 8px;
+    filter: grayscale(100);
+    transition: 1s;
+}
+.gallery img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.cards_item {
+    padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .cards_item {
+        width: 38%;
+    }
+}
+
+@media (min-width: 56rem) {
+    .cards_item {
+        width: 33.3333%;
+    }
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+
+.card img {
+    width: 100%;
+}
+  
+
+.back {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+.footer {
+    color: #fff;
+}
+.footer .social a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+@media(max-width: 998px) {
+    
+    .nav-items {
+        display: none;
+        flex-direction: column;
+    }
+    .nav-items.show {
+        display: flex;
+        align-items: center;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .img {
+        display: none;
+    }
+}

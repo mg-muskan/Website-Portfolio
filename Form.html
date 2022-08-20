@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+    <section class="header">
+        <div class="container">
+            <div class="main-menu">
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-items" id="nav-items">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Research.html">Research Lab</a></li>
+                    <li><a href="Publish-Publications.html">Publications & Patents</a></li>
+                    <li><a href="Students.html">Students</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="whole">
+        <div class="section">
+            <div class="main">
+                <form method="post" target="_self">
+                    <!-- <fieldset> -->
+                        <h2>
+                        <!-- <legend> -->
+                            <strong>Facility Booking Service</strong>
+                        <!-- </legend> -->
+                        </h2>
+                        <br>
+                        
+                        <div class="rest">
+                            <input type="radio" name="sections" value="" checked="">UG Students of IIT (ISM) Dhanbad<br>
+                            <input type="radio" name="sections" value="">PG Students of IIT (ISM) Dhanbad<br>
+                            <input type="radio" name="sections" value="">Faculty of IIT (ISM) Dhanbad<br>
+                            <input type="radio" name="sections" value="">Out of IIT (ISM) Dhanbad<br>
+                            <br>
+                            <label for="facility">Name of the facility</label><br>
+                            <select id="facility" name="facility">
+                                <option value="" selected disabled>--Select--</option>
+                                <option value="Less than 6">Micro milling</option>
+                                <option value="More than 6 and less than 8">Micro Drilling</option>
+                                <option value="More than 8">Micro Turning</option>
+                                <option value="More than 8">3D printing</option>
+                            </select><br>
+                    
+                            <label for="fname">Name</label><br>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name">
+                            <br>
+                            <label for="lname">Admission number/emplyee number</label><br>
+                            <input type="text" id="Admission" name="Admission" placeholder="Admission number/employee number">
+                            <br>
+
+                            <label for="lname">Name of the Department</label><br>
+                            <input type="text" id="Course" name="Course" placeholder="Name of the Department">
+                            <br>
+
+                            <label for="lname">Name of the Guide</label><br>
+                            <input type="text" id="Course" name="Course" placeholder="Name of the Guide">
+                            <br>
+
+                            <label for="lname">Email ID of Guide (only institute ID)</label><br>
+                            <input type="text" id="Course" name="Course" placeholder="Email..">
+
+
+                            <br><br>
+                            <label for="subject">Description of the job</label>
+                            <textarea id="subject" name="subject" placeholder="The maximum size of the sample for micro machining is 12X12X3 mm. For bigger sample kindly contact. 3D printing size is limited to 120mm each side" rows="4"></textarea>
+                            <br><br>
+
+                            <a class="nav-link" style="margin: -16px; color: aqua;" href="https://www.iitism.ac.in/~vivek/lab/facilitybooking.pdf">Click to download the facility booking form </a>
+                            <br>
+                            
+                            <label for="fname">Click on submit button and follow the instructions in the next page to avail this service.</label> <br>
+                            <center><input type="submit" value="Submit"></center>
+                        </div>
+                    <!-- </fieldset> -->
+                </form>
+            </div>
+        </div>
+        <footer class="footer bg-dark py-5">
+            <center>
+                <div class="social">
+                    Made by 
+                    <a href="https://github.com/mg-muskan"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://linkedin.com/in/mgmuskan/"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+                <div>
+                    <p>Copyright &copy; 2022</p>
+                </div>
+            </center>
+        </footer>
+    </div>
+
+        
+</body>
+</html>

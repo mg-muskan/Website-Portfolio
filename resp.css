@@ -1,0 +1,166 @@
+*{ /* '*' is the universal selector */
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100%;
+}
+
+/* Others are the class selector*/
+.header{
+    background-color: teal;
+    color: white;
+    line-height: 50px; /* Sets the text or everything to the center, works as padding can be said */
+}
+.container{
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+}
+.main-menu{
+    margin: auto;
+}
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-items li{
+    display: inline-block;
+}
+.nav-items li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+.nav-items li a:hover{
+    background-color: rgb(5, 39, 39);
+    padding: 20px;
+}
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+.hamburger:focus {
+    outline: none;
+}
+.body_header {
+    display: flex;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+.body {
+    display: grid;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: left;
+    grid-template-columns: auto auto;
+}
+.card{
+    padding: 20px;
+    box-shadow: 2px 2px 5px grey;
+    justify-content: center;
+    animation-duration: 3s;
+    animation-name: sliding;
+    animation-fill-mode: forwards;
+}
+@keyframes sliding {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-right: 0%;
+    }
+}
+.card img{
+    width: 100%;
+}
+.card-body{
+    margin-top: 10px;
+    text-align: center;
+}
+.card-body a{
+    display: inline;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid rgb(136, 104, 56);
+    margin: 10px;
+}
+.card-body a:hover{
+    /* background-color: rgb(22, 100, 100); */
+    background-color: rgb(219, 150, 22);
+    color: white;
+}
+.intro {
+    /* Opacity: 0; */
+    /* Transition: opacity 3s; */
+    padding-top: 20px;
+    /* padding-inline-start: 20px; */
+    padding-inline-end: 20px;
+}
+.intro_more {
+    margin-left: 30px;
+    animation: fadeIn 4s;
+}
+@keyframes fadeIn {
+    /* from {
+        opacity: 0;
+        margin-left: 50%;
+    }
+    to {
+        opacity: 1;
+        margin-right: 0%;
+    } */
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+}
+
+.footer {
+    color: #fff;
+}
+.footer .social a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+@media(max-width: 998px) {
+    
+    .nav-items {
+        display: none;
+        /* width: 100%; */
+        flex-direction: column;
+    }
+    .nav-items.show {
+        display: flex;
+        align-items: center;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Mobile */
+@media(max-width: 609px) {
+    .container .flex {
+        flex-direction: column;
+    }
+
+    .container ul {
+        padding: 10px;
+    }
+
+    .body {
+        grid-template-columns: 1fr;
+    }
+}
